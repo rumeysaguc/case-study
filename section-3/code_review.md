@@ -9,14 +9,12 @@ Doğru ve profesyonel yaklaşımla aynı işlemi şöyle yapardım:
 total_count = AssistanceRequest.objects.count()
 ```
 
----
-
 # **Potansiyel Hata 2**
 
 Yine kodda ikinci göze çarpan nokta provider'ların tamamını alıp (ki bu binlerce veya on binlerce olabilir) döngüyle dönerken aktiflik kontrolü yapmak çok verimsiz bir yaklaşımdır.
 Gereksiz işlem yükü oluşturur.
 
-Aynı şekilde modelde zaten `last_ping` field'ı varsa neden 5 dakika kontrolünü Django’nun QuerySet metotlarıyla yapmayalım?
+Aynı şekilde modelde zaten `last_ping` field'ı varsa neden 5 dakika kontrolünü Django’nun QuerySet metotlarıyla yapmayalım.
 
 Aynı işlemin performanslı halinin şöyle olması gerektiğini düşünüyorum:
 
@@ -32,7 +30,6 @@ active_count = Provider.objects.filter(
 ).count()
 ```
 
----
 
 # **Potansiyel Hata 3**
 
