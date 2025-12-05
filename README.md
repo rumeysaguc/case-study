@@ -3,7 +3,7 @@
 ## 1. Proje Klonlama
 
 ```bash
-git clone <repo_url>
+git clone https://github.com/destechhasar/destechchallenge.git
 cd destechchallenge
 ```
 
@@ -35,8 +35,7 @@ docker compose exec web python manage.py createsuperuser
 * Superuser oluşturmak için kullanıcı adı, e-mail ve şifre girilecek
 
 
-## 6. Test Kayıtlarını Oluşturma (Shell ile)
-
+## 6. Test Kayıtlarını Oluşturma Shell açıp
 ```bash
 docker compose exec web python manage.py shell
 ```
@@ -64,7 +63,7 @@ req = AssistanceService.create_request({
 print(req.id, req.customer_name, req.status)
 ```
 
-* Bu şekilde Provider ve AssistanceRequest kayıtları oluşturulur.
+* Bu şekilde Provider ve AssistanceRequest kayıtları oluşturuldu.
 * `AssistanceService` üzerinden request oluşturulduktan sonra Celery task’ları otomatik tetiklenir.
 
 ## 7. API Testleri
@@ -103,7 +102,7 @@ curl -X POST http://localhost:8000/api/request/1/complete/
 
 ## 8. Celery Task Kontrolü
 
-Worker loglarını takip et:
+Worker loglarını takip etmek için terminalde çalıştırdığım kod:
 
 ```bash
 docker compose logs -f worker
@@ -114,9 +113,8 @@ docker compose logs -f worker
 
 ## 9. Önemli Notlar
 
-* `config/celery.py` içinde Celery uygulaması **app olarak tanımlanmalı**.
 * `requests` modülü Docker container içinde yüklü olmalı (`requirements.txt`).
-* Docker container rebuild ve restart işlemleri unutulmamalı:
+* Docker container rebuild ve restart işlemleri yaptım:
 
 ```bash
 docker compose build web
