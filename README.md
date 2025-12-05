@@ -48,8 +48,8 @@ Shell içinde:
 
 ```python
 from assistance.models import Provider
-Provider.objects.create(name="Towing A", lat=40.0, lon=29.0, is_available=True)
-Provider.objects.create(name="Towing B", lat=41.0, lon=29.5, is_available=True)
+Provider.objects.create(name="Test A", lat=40.0, lon=29.0, is_available=True)
+Provider.objects.create(name="Test B", lat=41.0, lon=29.5, is_available=True)
 
 # Check
 print(Provider.objects.all())
