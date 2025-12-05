@@ -1,5 +1,7 @@
 # DestechChallenge Projesi
 
+Bu repo da iletilen case-study nin üç aşamasına ait çözümler bulunmaktadır. İlk klasör de iletilen proje mimarisi tasarlandı excalidraw da. Bunu png hali yüklendi. Section 2 klasörümde kodlaması yapılan dosyalar yüklendi. (İstek halinde full projeyi yükleyebilirim özellikle öyle talep edildiği için sadece değişiklik yaptığım dosyalar var.) Section-3 de code rewiev sonucu fark ettiğim hatalar bulunuyor.
+
 ## 1. Proje Klonlama
 
 ```bash
