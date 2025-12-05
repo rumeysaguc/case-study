@@ -15,6 +15,8 @@ cd destechchallenge
 
 ## 4. Docker Servislerini Başlatma
 
+Bundan önce pgadminle içeri bu çalışma için veritabanı oluşturdum.
+
 ```bash
 docker compose up -d
 ```
@@ -104,7 +106,7 @@ curl -X POST http://localhost:8000/api/request/1/complete/
 
 ## 8. Celery Task Kontrolü
 
-Worker loglarını takip etmek için terminalde çalıştırdığım kod:
+Worker loglarını takip etmek için terminalde çalıştırdığım kod :
 
 ```bash
 docker compose logs -f worker
