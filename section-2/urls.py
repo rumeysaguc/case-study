@@ -1,7 +1,13 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+
+from .views import (
+    AssistanceRequestCreateView,
+    AssistanceRequestCompleteView,
+    AssistanceRequestCancelView,
+)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('assistance.urls')),
+    path("request/", AssistanceRequestCreateView.as_view(), name="assistance-create"),
+    path("request/<int:request_id>/complete/", AssistanceRequestCompleteView.as_view(), name="assistance-complete"),
+    path("request/<int:request_id>/cancel/", AssistanceRequestCancelView.as_view(), name="assistance-cancel"),
 ]
